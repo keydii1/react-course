@@ -26,7 +26,12 @@
       function ChatMessage({ message, sender }) {
         // const message = props.message;
         // const sender = props.sender;
-        // const { message, sender } = props;
+
+        // đoạn code ở trên không cần bởi vì props đã được destructuring ở tham số hàm, nếu tham số đầu hàm ghi là props thì mới cần
+
+        // const { message, sender } = props; the same as // const { a, b } = props;
+        // cách này còn được gọi là destructuring
+        // những thuộc tính nào của props sẽ lần lượt được gán vào biến ở bên trái, bắt buộc phải đúng tên của  thuộc tính trong props
 
         /*
         if (sender === 'robot') {
