@@ -153,6 +153,28 @@ Backend Overview: https://youtu.be/XBu54nfzxAQ
 
 Put an HTML Website on the Internet: https://youtu.be/p1QU3kLFPdg
 
+### Elastic Beanstalk Instance Types
+If you created your account **after July 15, 2025** use these instance types:
+```
+t3.micro
+t3.small
+```
+(If you don't see these instance types, just use the default instance types provided by Elastic Beanstalk)<br />
+<br />
+
+If you created your account **before July 15, 2025** use these instance types:
+```
+t3.micro
+t2.micro
+```
+
+### Database Instance Class
+Use this instance class when creating the database:
+```
+db.t3.micro
+```
+
+### Domain Name
 Namecheap: https://namecheap.pxf.io/jeDGga <br>
 (This is an affiliate link. If you buy a domain using this link, part of your purchase will support SuperSimpleDev. Thank you!)
 
