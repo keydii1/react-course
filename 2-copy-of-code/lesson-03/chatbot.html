@@ -8,9 +8,7 @@
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
       function ChatInput({ chatMessages, setChatMessages }) {
@@ -19,7 +17,6 @@
         function saveInputText(event) {
           setInputText(event.target.value);
         }
-
         function sendMessage() {
           const newChatMessages = [
             ...chatMessages,
@@ -29,9 +26,7 @@
               id: crypto.randomUUID()
             }
           ];
-
           setChatMessages(newChatMessages);
-
           const response = Chatbot.getResponse(inputText);
           setChatMessages([
             ...newChatMessages,
@@ -41,10 +36,8 @@
               id: crypto.randomUUID()
             }
           ]);
-
           setInputText('');
         }
-
         return (
           <>
             <input
@@ -59,23 +52,7 @@
           </>
         );
       }
-
       function ChatMessage({ message, sender }) {
-        // const message = props.message;
-        // const sender = props.sender;
-        // const { message, sender } = props;
-
-        /*
-        if (sender === 'robot') {
-          return (
-            <div>
-              <img src="robot.png" width="50" />
-              {message}
-            </div>
-          );
-        }
-        */
-
         return (
           <div>
             {sender === 'robot' && (
@@ -88,7 +65,6 @@
           </div>
         );
       }
-
       function ChatMessages({ chatMessages }) {
         return (
           <>
@@ -104,7 +80,6 @@
           </>
         );
       }
-
       function App() {
         const [chatMessages, setChatMessages] = React.useState([{
           message: 'hello chatbot',
@@ -123,10 +98,6 @@
           sender: 'robot',
           id: 'id4'
         }]);
-        // const [chatMessages, setChatMessages] = array;
-        // const chatMessages = array[0];
-        // const setChatMessages = array[1];
-
         return (
           <>
             <ChatInput
@@ -139,7 +110,6 @@
           </>
         );
       }
-
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(<App />);
     </script>
